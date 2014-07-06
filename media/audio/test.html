@@ -1,0 +1,18 @@
+<script src="script/soundmanager2.js"></script>
+<script>
+soundManager.setup({
+  // where to find flash audio SWFs, as needed
+  url: 'swf/',
+  onready: function() {
+    
+    soundManager.createSound({
+      id: 'mySound',
+      url: 'demo/_mp3/rain.mp3'
+    });
+    
+    // ...and play it
+    soundManager.play('mySound');
+    
+  }
+});
+</script>

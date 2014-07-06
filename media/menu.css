@@ -1,0 +1,850 @@
+body{
+    background: #000;
+    font-size: 12px !important;
+    font-family: Arial !important;
+    color: #DFDFDF;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+h3{
+    font-family: Arial !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+p{
+    font-size: 13px !important;
+}
+a{
+    color: #fff;
+}
+#MenuBlocks .block{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 500px;
+    display: none;
+}
+#MenuBlocks .block.dark{
+    background: rgba(0,0,0,0.5);
+}
+#MenuBlocks .block .retive{
+    padding: 30px 40px;
+}
+#MenuBlocks .block.shadow{
+    background: rgba(0, 0, 0, 0.2) url(/images/game/menu_shadow.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+h4{
+    font-weight: normal;
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+}
+h5{
+    font-size: 23px;
+    color: #ddeffb;
+    font-weight: normal;
+    margin: 0;
+    text-shadow: 0 0 9px #78c1ff;
+}
+h1{
+    font-size: 33px;
+    font-weight: normal;
+    color: #fcaf4c;
+    text-shadow: 0 0 5px rgba(255,84,0,0.6);
+    margin: 0;
+}
+h6{
+    font-size: 17px;
+    color: #fcaf4c;
+    text-shadow: 0 0 5px rgba(255,84,0,0.6);
+    font-weight: normal;
+    margin: 0;
+}
+#consoleLog{
+    background: rgba(0,0,0,0.7);
+    z-index: 10000;
+    display: none;
+    border-bottom: 2px solid #971919;
+}
+#consoleLog .consoleLogScroll{
+    height: 250px
+}
+#consoleLog .consoleLogData{
+    padding: 5px 15px;
+}
+#consoleLog .consoleLogData p{
+    padding: 0;
+    padding-left: 10px;
+    color: #F54141;
+    font-size: 10px !important;
+    background: url(/images/game/console.png) no-repeat 0 50%;
+}
+.hide{
+    display: none;
+}
+#connectServer{
+    font-size: 11px;
+    color: #ddeffb;
+    text-shadow: 0 0 3px rgba(120,193,255,0.5);
+    left: 39px;
+    bottom: 10px;
+    display: none;
+}
+#connectServer img{
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+#fullscreen,
+#menuIcon{
+    background: url(/images/game/fullscreen.png) no-repeat 0 0;
+    width: 21px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 900;
+    top: 10px;
+    right: 10px;
+}
+#menuIcon{
+    background: url(/images/game/menuIcon.png) no-repeat 0 0;
+    right: 41px;
+}
+.iconsGame{
+    display: none;
+    z-index: 1000
+}
+.copyr{
+    z-index: 1000;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    width: 210px;
+    height: 59px;
+    margin: 0 0 0 -105px;
+    background: url(/images/game/copyr.png) no-repeat 0 0;
+    display: none;
+}
+.menuLoad,
+.loadingGameProgress{
+    z-index: 1000;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 16px;
+    height: 16px;
+    background: url(/images/game/conect.gif) no-repeat 0 0;
+    display: none;
+}
+.menuLoad{
+    margin: -8px 0 0 -8px;
+    right: 50%;
+    bottom: 50%;
+}
+
+.eMassBg{
+    background: rgba(0, 0, 0, 0.2) url(/images/game/menu_shadow.png) no-repeat 50% 50%;
+    background-size: cover;
+    display: none;
+    z-index: 899;
+}
+.eMass{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 70px;
+    z-index: 900;
+    display: none;
+    box-shadow: 0 0 16px rgba(190,218,255,0.1);
+}
+.eMass .retive{
+    position: relative;
+    height: inherit;
+}
+.eMass .border{
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    opacity: 0.2;
+    margin: -1px 0 0 -1px;
+}
+.eMass .content{
+    background: rgba(255,255,255,0.05);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.eMass.warn .content{
+    background: rgba(255,14,0,0.2);
+}
+.eMass .content.black{
+    background: rgba(0,0,0,0.8);
+}
+.eMass.warn .border{
+    border: 1px solid #DD6666;
+    opacity: 0.6;
+}
+.eMass .content .data{
+    min-width: 260px;
+    min-height: 40px
+}
+.eMass .panel{
+    background: url(/images/game/storePlStrong.png);
+    height: 19px;
+    margin: -1px 28px 0 -1px;
+}
+.eMass .ico{
+    background: url(/images/game/eMassIco.png) no-repeat;
+    width: 59px;
+    height: 51px;
+    margin: 10px;
+    display: none;
+}
+.eMass .close{
+    background: url(/images/game/eMassClose.png) no-repeat 50% 50%;
+    width: 29px;
+    height: 19px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    cursor: pointer;
+}
+.eMass .html{
+    padding: 6px;
+    color: #bfbfbf;
+}
+
+.money li{
+    display: block;
+    margin: 5px 0;
+    padding: 5px 5px;
+}
+.money li:hover{
+    /*background: url(/images/game/lineBlockBg.png);*/
+}
+.money li .sep{
+    margin-top: 11px;
+    opacity: 0.2;
+}
+.money li:last-child .sep{
+    display: none;
+}
+.money li .dic{
+    float: right;
+    padding: 10px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.money li .vote{
+    float: right;
+    padding-right: 18px;
+}
+.money li img{
+    float: left;
+}
+.money li .vote .amount{
+    font-size: 28px;
+    padding-right: 5px;
+}
+.money h1{
+    margin: 0 0 0 15px;
+    padding: 4px 0 0 0;
+    float: left;
+    font-size: 20px;
+}
+
+.deadInfo,
+.gameInfo{
+    left: 10px;
+    top: 25px;
+    width: 200px
+}
+.gameInfo{
+    top: auto;
+    bottom: 15px;
+}
+.deadInfo li,
+.gameInfo li{
+    display: block;
+    text-shadow: 0 0 1px #000;
+    padding: 3px;
+    font-size: 10px;
+    color: #D0D0D0
+}
+.gameInfo li{
+    font-size: 11px;
+}
+.deadInfo li span.red,
+.gameInfo li span.red{
+    color: #FF4E01;
+}
+.deadInfo li span.yelow,
+.gameInfo li span.yelow{
+    color: #FFA201;
+}
+.deadInfo li span.blue,
+.gameInfo li span.blue{
+    color: #65ACD8;
+}
+.bonusBlock{
+    background: url(/images/game/bonusBg.png) no-repeat 50% 50%;
+    height: 130px;
+}
+.bonusBlock .bonus{
+    margin-top: 40px;
+    width: 33.3%;
+    text-align: center;
+    float: left;
+}
+.bonusBlock .number{
+    padding-right: 8px;
+}
+.bonusBlock .bl{
+    background: url(/images/game/bonusNext.png) no-repeat 94% 50%;
+}
+.bonusBlock .br{
+    background: url(/images/game/bonusNext.png) no-repeat 4% 50%;
+}
+
+
+/*********************************************/
+/***************CUSTOM CSS********************/
+/*********************************************/
+
+.mainMenu{
+    width: 240px;
+    margin-top: 100px;
+}
+.mainMenu li{
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 2px 5px;
+    display: block;
+}
+.mainMenu li img{
+    vertical-align: middle;
+}
+.mainMenu li:hover{
+    background: rgba(255,255,255,0.1);
+}
+
+/*Line Block*/
+
+.lineBlock{
+    min-width: 400px;
+}
+.lineBlock .lc{
+    float: left;
+}
+.lineBlock .lij b{
+    float: left;
+    display: block;
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #fff;
+}
+.sep{
+    position: relative;
+    border-bottom: 1px solid #fff;
+}
+.lineBlock .lij b:after,
+.lineBlock .lij b:before,
+.sep:after,
+.sep:before{
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    bottom: -2px;
+}
+.sep:after{
+    left: 0;
+}
+.sep:before{
+    right: 0;
+}
+.lineBlock .pd{
+    padding: 10px 0;
+}
+.lineBlock .lf,
+.lineBlock .lh{
+    width: 65%;
+}
+.lineBlock .lh:after{
+    left: 0;
+}
+.lineBlock .rf,
+.lineBlock .rh{
+    width: 35%;
+}
+.lineBlock .rh:before{
+    right: 0;
+}
+.lineBlock .rf .pd{
+    padding-left: 15px;
+}
+.lineBlock:after,
+.lineBlock .lij:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.lineBlock.hover:hover{
+    background: url(/images/game/lineBlockBg.png);
+    cursor: pointer;
+}
+
+.glow{
+    text-shadow: 0 0 5px rgba(190,228,255,0.45);
+    color: #fff;
+}
+.dic{
+    border: 1px solid #f87c8a;
+    box-shadow: 0 0 5px rgba(248,18,50,0.25);
+    background: rgba(215,13,32,0.15);
+}
+.dic div{
+    padding: 3px 10px;
+    box-shadow:inset 0 0 7px rgba(245,26,47,0.60);
+    min-width: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.backBtn{
+    padding: 3px 0 0 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: url(/images/game/backBtn.png) no-repeat 0 50%;
+}
+
+.hic{
+    background: rgba(255,255,255,0.04);
+    outline: 1px solid rgba(255,255,255,0.17);
+}
+.input{
+    background: rgba(231,244,252,0.03);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 5px rgba(201,222,248,0.11);
+    padding: 0 5px;
+}
+.input input{
+    outline: none;
+    border: none;
+    background: none;
+    display: block;
+    width: 100%;
+    padding: 3px 0;
+    color: #DFDFDF;
+}
+.btnBig{
+    display: inline-block;
+    position: relative;
+    background: rgba(231,244,252,0.03);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 5px rgba(201,222,248,0.11);
+    padding: 10px;
+    cursor: pointer;
+}
+.btnBig:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 7px rgba(220,239,249,0.17);
+}
+/*Server List*/
+
+.serverList h3{
+    margin: 0 0 12px 0;
+    font-size: 17px;
+}
+
+.serverList ul li{
+    padding: 0 5px 0 10px;
+    background: url(/images/game/li_dot.png) no-repeat 0 50%;
+}
+.serverList ul li:first-child{
+    background: none;
+    padding-left: 0;
+}
+.serverList .players{
+    font-size: 12pt;
+    margin: 0px 0 12px 0;
+    font-weight: normal;
+    display: block;
+}
+.serverList .endTime{
+    font-size: 12px;
+}
+.serverList .lineBlock:last-child .lij{
+    display: none;
+}
+.servConnectShow{
+    background: url(/images/game/conect.gif) no-repeat 0 50%;
+    padding-left: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: 11px 0 0 27px;
+}
+
+.serverCreate{
+    background: url(/images/game/grid.png);
+    width: 232px;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    height: 100%;
+}
+.serverCreate .servImg{
+    width: 192px;
+    height: 129px;
+    overflow: hidden;
+    margin: 40px 0 18px 0;
+}
+.serverCreate .servImg img{
+    width: 192px;
+    height: 129px;
+}
+.serverCreate .sest{
+    padding: 4px 0;
+}
+
+.grid{
+    background: url(/images/game/grid.png);
+}
+.menuGrid{
+    position: absolute;
+    top: 0;
+    left: 40px;
+    height: 100%;
+}
+
+/*Dislocation*/
+
+#dslPointList{
+    padding: 1px !important;
+}
+#dslPointList h3{
+    margin: 0 0 4px 0;
+    display: block;
+}
+#dslPointList span{
+    font-size: 9px;
+    opacity: 0.3;
+}
+#dslPointList li{
+    display: block;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+#dslPointList li:hover,
+#dslPointList li.active{
+    background: rgba(255,255,255,0.04);
+    outline: 1px solid rgba(255,255,255,0.17);
+}
+#dslWeapons .wblc{
+    margin: 1px 0;
+    padding-left: 1px;
+    height: 50px;
+}
+#dslWeapons .wblc:last-child{
+    height: 43px
+}
+#dslWeapons .wblc .img{
+    width: 93px;
+    height: 41px;
+    margin-right: 10px;
+}
+#dslWeapons .wblc .img div{
+    text-align: center;
+}
+#dslWeapons .wblc h3{
+    margin: 0 0 3px 0;
+    font-weight: lighter;
+    font-size: 14px;
+}
+#dslWeapons .wblc span{
+    cursor: pointer;
+}
+#dslWeapons .dsSelectWeapon{
+    padding: 5px;
+    background: rgba(255,255,255,0.04);
+    outline: 1px solid rgba(255,255,255,0.17);
+    margin: 1px;
+    cursor: pointer;
+}
+#dslWeapons .dsSelectWeapon:hover{
+    background: rgba(255,255,255,0.1);
+}
+.dslBgSc{
+    background: url(/images/game/dslCamC.png) no-repeat 50% 50%, url(/images/game/dslCamL.png) no-repeat 100% 50%;
+}
+
+/** Store Blocks **/
+.storeBlock{
+    margin: 0 -7px;
+}
+.storeBlock li,
+.storeValue{
+    background: rgba(255,255,255,0.05);
+    position: relative;
+    margin: 1px 15px 18px 1px;
+    cursor: pointer;
+}
+.storeBlock li{
+    display: block !important;
+    float: left;
+    margin: 1px 7px 18px 8px;
+}
+.storeBlock li .storeBorder,
+.storeValue .storeBorder{
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    opacity: 0.2;
+    margin: -1px 0 0 -1px;
+    display: none;
+}
+.storeBlock li .topPanel,
+.storeValue .topPanel{
+    background: url(/images/game/storePl.png);
+    height: 19px;
+    margin: 0px 26px 0 0px;
+}
+.storeBlock li .topPanel .name,
+.storeBlock li .topPanel .price,
+.storeValue .topPanel .name,
+.storeValue .topPanel .price{
+    color: #bfbfbf;
+    float: left;
+    font-family: Arial;
+    font-size: 11px;
+    padding: 3px 10px;
+}
+.storeBlock li .image,
+.storeValue .image{
+    padding: 8px;
+    min-width: 105px;
+    min-height: 40px;
+    text-align: center;
+}
+.storeBlock li .topPanel .price,
+.storeValue .topPanel .price{
+    color: #bfbfbf;
+    float: right;
+    font-family: Arial;
+    font-size: 11px;
+    padding: 3px 10px 3px 0;
+}
+.storeBlock li .image img,
+.storeValue .image img{
+    max-width: 242px;
+    vertical-align: middle;
+}
+.storeValue .image img{
+    max-width: 50px;
+    vertical-align: middle;
+}
+.storeValue .image{
+    min-width: 70px;
+    min-height: 40px;
+    padding: 0;
+}
+
+.storeBlock li .status,
+.storeValue .status{
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 25px;
+    height: 17px;
+    border: 1px solid #f87c8a;
+    box-shadow: 0 0 5px rgba(248,18,50,0.25);
+    background: rgba(215,13,32,0.15) url(/images/game/storeLno.png) no-repeat 50% 50%;
+}
+.storeBlock li .status.active,
+.storeValue .status.active{
+    background: rgba(231,244,252,0.03) url(/images/game/storeLpa.png) no-repeat 50% 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 5px rgba(201,222,248,0.11);
+}
+.storeValue .btnBuy{
+    text-align: center;
+    color: #fff;
+    padding: 3px 0;
+    border: 1px solid #f87c8a;
+    box-shadow: 0 0 5px rgba(248,18,50,0.25);
+    background: rgba(215,13,32,0.15);
+    margin: 0 -1px -1px -1px;
+}
+.storeBlock li:last-child{
+    margin-bottom: 1px;
+}
+#scRightData h2{
+    margin-top: -4px;
+    margin-bottom: 0px;
+}
+#scRightData p{
+    margin-top: 0px;
+}
+#scRightData li .sep{
+    opacity: 0.1;
+}
+#scRightData li{
+    margin: 5px 0px;
+}
+#scRightData > li{
+    display: block;
+}
+.storeOpc{
+    margin-bottom: 10px;
+}
+.storeOpc li{
+    font-size: 11px;
+    margin: 0 10px 0 0 !important;
+}
+.storeOpc li b{
+    font-weight: normal;
+    color: #96c90b;
+}
+.storeOpc li b.min{
+    color: #ff8c95;
+}
+.settingList li{
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.settingList li b{
+    display: inline-block;
+    float: left;
+    padding-top: 3px;
+}
+.settingList li:hover{
+    background: url(/images/game/lineBlockBg.png);
+}
+
+/** Table Style **/
+
+.s_table{
+    width: 100%;
+    border: 0px; 
+    border-collapse: collapse;
+    cursor: default;
+    font-size: 11px;
+}
+.s_table th{
+    text-transform: uppercase;
+    text-align: left;
+    padding: 3px 0 3px 5px;
+    background: #fff;
+    color: #191F22;
+    background: #fff url(/images/game/scfh.png) repeat-x 0 100%;
+    font-size: 11px;
+}
+.s_table tr td{
+    padding: 2px 0;
+}
+.s_table tr td img{
+    vertical-align: middle;
+    margin: -2px 5px 0 5px;
+    height: 13px;
+}
+.s_table tr td div{
+    background: rgba(255,255,255,0.03);
+    padding: 3px 5px;
+}
+.s_table tr td:last-child,
+.s_table tr th:last-child{
+    text-align: center;
+}
+.s_table tr td div{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 6px rgba(169,220,255,1);
+}
+.s_table tr:nth-child(even) td div{
+    background: rgba(255,255,255,0.10);
+}
+.s_table.settings tr:nth-child(even) td div{
+    background: rgba(255,255,255,0.03);
+}
+.s_table.settings tr td:last-child div{
+    background: rgba(255,255,255,0.10);
+    cursor: pointer;
+}
+.s_table tr:hover td div,
+.s_table tr.active td div{
+    /*color: #191F22;*/
+    /*background: #fff url(/images/game/scfh.png) repeat-x 0 100% !important;*/
+    background: url(/images/game/lineBlockBg.png) fixed !important;
+    color: #fff;
+    text-shadow: none
+}
+.s_table td.sel{
+    cursor: pointer;
+    width: 100px;
+}
+.scoreSpan{
+    font-size: 20px;
+}
+#weaponAddonLines li{
+    display: block;
+}
+#weaponAddonLines li span{
+    overflow: hidden;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+#weaponAddonLines li div.blcx{
+    background: rgba(255,255,255,0.1);
+    height: 8px;
+    width: 290px;
+    float: right;
+    margin-top: 4px;
+    word-wrap: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+#weaponAddonLines li div.white{
+    height: inherit;
+    background: #fff;
+    float: left;
+}
+#weaponAddonLines li div.admn{
+    height: inherit;
+    position: absolute;
+    top: 0;
+}
+#weaponAddonLines li div.admn.green{
+    background: #2CB31F;
+}
+#weaponAddonLines li div.admn.red{
+    background: #EC4351;
+}
+#weaponAddonLines li div.val{
+    float: right;
+    width: 20px;
+    padding-left: 7px;
+}
