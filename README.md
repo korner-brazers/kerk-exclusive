@@ -9,7 +9,8 @@ KERK Exclusive - Мощный конструктор 2D игр, конструк
 Более подробно на сайте (http://kerk.pw/tpl/display/engine_lite)
 
 
-###Информация
+Информация
+======
 
   Автор - korner - (neoks)
   
