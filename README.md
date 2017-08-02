@@ -11,6 +11,6 @@ KERK Exclusive - Мощный конструктор 2D игр, конструк
 
 ###Информация
 
-  Автор - korner-brazers
+  Автор - korner - (neoks)
   
   Сайт  - (http://kerk.pw)
